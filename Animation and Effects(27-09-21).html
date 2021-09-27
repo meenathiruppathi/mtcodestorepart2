@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+		
+		$("#button").click(function(){
+		$("#myDiv1").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(3000);		
+		
+		
+		
+		
+		
+		
+		});			
+			$('#mydiv').animate({ 
+                        height: '200px',
+                        width: '200px' 
+                     }, 
+                    {    // options parameter 
+                         duration: 5000,
+                         complete: function () {
+                             $(this).animate({ 
+                                 height: '100px',
+                                 width: '100px'
+                             }, 5000,
+                             function () { 
+                                 $('#msgdiv').text('animation completed..');
+                             }); 
+                         }, 
+                         start: function () { 
+                             $('#msgdiv').append('starting animation..'); 
+                         } 
+                     }); 
+					 
+					 $('#myDiv1').fadeIn(9000, function () {
+            $('#msgDiv1').append('fadeIn() completed.')
+        });
+
+		 <!-- $('div').each(function () { -->
+            <!-- alert($(this).attr('title')); -->
+        <!-- });	 -->
+  $('div').each(function (i) {
+            $(this).attr('title', 'div ' + (i + 1) + ' title');
+        });
+
+        // Retrieve and alert the title attribute value of all DIV elements
+        $('div').each(function () {
+            alert($(this).attr('title'));
+        });		
+		
+		// Ananymous Function
+		
+		var disp =function()
+		{
+		alert('ananymous function');
+		};
+		disp();		
+	
+					
+					<!-- <!-- <!-- $('#myDiv1').toggle(500); --> --> -->
+// $('#mydiv1').fadeout(500); 
+// $('#myDiv1').fadeIn(500);
+ $('#myDiv1').slideDown(500); 
+<!-- $('#msgDiv1').append('Animation functions: ' + $('#myDiv1').queue().length); -->
+
+			});
+    </script>
+	<style>
+        .redDiv {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+			margin-bottom:30px
+        }
+		.redDiv1 {
+            background-color: red;
+            height: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+	<h1>Demo: jQuery animate() method</h1>
+<div class="Container" title="div">
+	<div id="mydiv" title="mydiv" class="redDiv">
+	</div>
+	<div id="msgdiv" title="msgdiv"></div>
+	
+	<div id="myDiv1" title="mydiv1" class="redDiv1">
+	</div>
+	<br>
+	<input type="button" value="click me"  id="button">
+	
+	
+
+<div id="msgDiv1" title="msgdiv1"></div>
+
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
