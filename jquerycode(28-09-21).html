@@ -1,0 +1,106 @@
+To create an array of list item text values, we could use either map() or each() methods. 
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+	
+	//  Using map() method
+$(document).ready(function () {
+    alert($('li').map(function (index, element) {
+        return $(element).text();
+    }).get());
+});
+
+
+$(document).ready(function () {
+    var intArray = [1, 2, 3, 4, 5];
+
+    function functionA(index, element) {
+        return element * 5;
+    }
+
+    function functionB(element, index) {
+        return element * 5;
+    }
+
+    var result1 = $.each(intArray, functionA);
+    var result2 = $.map(intArray, functionB);
+
+    console.log('each = ' + result1);
+    console.log('<br/>')
+    console.log('map = ' + result2);
+});
+
+
+
+
+   // Using each() method
+<!-- $(document).ready(function () { -->
+    <!-- var result = []; -->
+
+    <!-- $('li').each(function (index, element) { -->
+        <!-- result.push($(element).text()); -->
+    <!-- }); -->
+
+    <!-- alert(result); -->
+<!-- }); -->
+
+
+	</script>
+	
+	<script>
+$(document).ready(function(){
+  $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+
+$(document).ready(function(){
+  $("span").parents().css({"color": "red", "border": "2px solid red"});
+});
+
+	</head>
+	<body>
+	<h1>Demo: jQuery map method</h1>
+	<ul>
+    <li>US</li>
+    <li>India</li>
+    <li>UK</li>
+    <li>Canada</li>
+    <li>Australia</li>
+</ul>
+// jquery parent method
+
+
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;">div (grandparent)   
+    <p>p (direct parent)
+      <span>span</span>
+    </p> 
+  </div>
+</div>
+
+
+<div class="ancestors">body (great-great-grandparent)
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span> span </span>
+      </li>
+    </ul>   
+  </div>
+</body>
+</html>
+

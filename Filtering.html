@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").first().css("background-color", "yellow");
+  
+  $("div").last().css("background-color", "red");
+});
+
+// div last
+
+
+
+// eq method
+$(document).ready(function(){
+  $("p").eq(1).css("background-color", "pink");
+});
+// filter method
+$(document).ready(function(){
+  $("p").filter(".intro").css("background-color", "blue");
+});
+// not method
+$(document).ready(function(){
+ // $("p").not(".intro").css("background-color", "green");
+});
+
+</script>
+</head>
+<body>
+
+<h1>Filtering example</h1>
+
+<p>This is a paragraph.</p>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in a div.</p>
+  <p>Another paragraph in a div.</p>
+  <p class="intro">I live in Duckburg.</p>
+<p class="intro">I love Duckburg.</p>
+<p>Donald Duck (index 1).</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+
+</body>
+</html>
